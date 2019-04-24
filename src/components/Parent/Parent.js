@@ -14,15 +14,15 @@ class Parent extends Component {
   };
 
   colors = [
-    { color: "yellow", score: 2 },
-    { color: "green", score: 3 },
-    { color: "brown", score: 4 },
-    { color: "blue", score: 5 },
-    { color: "pink", score: 6 },
-    { color: "black", score: 7 }
+    { color: "Yellow", score: 2 },
+    { color: "Green", score: 3 },
+    { color: "Brown", score: 4 },
+    { color: "Blue", score: 5 },
+    { color: "Pink", score: 6 },
+    { color: "Black", score: 7 }
   ];
 
-  red = { color: "red", score: 1 };
+  red = { color: "Red", score: 1 };
 
   callback = color => {
     const { current, available, moveList, red } = this.state;
@@ -75,7 +75,13 @@ class Parent extends Component {
             })
           )}
           <Grid item xs={12}>
-            <Card onClick={this.reset}>
+            <Card
+              onClick={this.reset}
+              style={{
+                outline: `1px solid black`,
+                textAlign: "center"
+              }}
+            >
               <h1>Reset</h1>
             </Card>
           </Grid>
